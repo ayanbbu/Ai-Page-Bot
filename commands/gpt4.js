@@ -9,7 +9,7 @@ module.exports = {
     try {
       const apiUrl = `https://deku-rest-api.gleeze.com/gpt4?prompt=${encodeURIComponent(prompt)}&uid=100${senderId}`;
       const response = await axios.get(apiUrl);
-      const text = response.data.gpt4;
+      const text = response.data;
 
       // Split the response into chunks if it exceeds 2000 characters
       const maxMessageLength = 2000;
