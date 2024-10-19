@@ -15,7 +15,7 @@ module.exports = {
     });
 
     const totalCommands = commandFiles.length;
-    const helpMessage = `Administraion Bot:Aljur Pogoy. Here are the available commands: \nTotal commands: ${totalCommands} \n\n${commands.join('\n\n')}`;
+    const helpMessage = `Here are the available commands: \nTotal commands: ${totalCommands} \n\n${commands.join('\n\n')}`;
     
     sendMessage(senderId, { text: helpMessage }, pageAccessToken);
   }
