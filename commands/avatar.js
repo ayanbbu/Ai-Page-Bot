@@ -1,5 +1,4 @@
 const axios = require('axios');
-const { getStreamFromURL } = global.utils
 
 module.exports = {
   name: 'avatar',
