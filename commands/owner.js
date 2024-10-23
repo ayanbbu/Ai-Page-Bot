@@ -6,7 +6,7 @@ const moment = require('moment-timezone'); // Import moment for working with dat
 module.exports = {
   name: 'owner',
   description: 'Get owner information and a video',
-  author: 'Bard',
+  author: 'Aljur Pogoy',
   async execute(senderId, args, pageAccessToken, sendMessage) {
     try {
       const ownerInfo = {
