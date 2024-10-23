@@ -5,14 +5,14 @@ const path = require('path');
 module.exports = {
   name: 'help',
   description: 'Show available commands',
-  author: 'Aljur Pogoy',
+  author: 'A Y AN',
   execute(senderId, args, pageAccessToken, sendMessage) {
     const commandsDir = path.join(__dirname, '../commands');
     const commandFiles = fs.readdirSync(commandsDir).filter(file => file.endsWith('.js'));
 
     const commands = commandFiles.map(file => {
       const command = require(path.join(commandsDir, file));
-      return `➯《 ${command.name} 》\n  ➯ ${command.description}\n  ➯ Credits: Aljur Pogoy`;
+      return `➯《 ${command.name} 》\n  ➯ ${command.description}\n  ➯ Owner: A Y AN`;
     });
 
     const totalCommands = commandFiles.length;
@@ -22,7 +22,7 @@ module.exports = {
     const end = start + pageSize;
     const paginatedCommands = commands.slice(start, end);
 
-    const helpMessage = `Kazuto Kirigaya Commands\n━━━━━━━━━━━━━━━━━\n${paginatedCommands.join('\n\n')}\n\nPage ${page} of ${Math.ceil(totalCommands / pageSize)}\n━━━━━━━━━━━━━━━━━\n𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : Aljur Pogoy`;
+    const helpMessage = `A Y A N Commands ✨\n━━━━━━━━━━━━━━━━━\n${paginatedCommands.join('\n\n')}\n\nPage ${page} of ${Math.ceil(totalCommands / pageSize)}\n━━━━━━━━━━━━━━━━━`;
 
     sendMessage(senderId, { text: helpMessage }, pageAccessToken);
   }
