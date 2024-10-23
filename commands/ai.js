@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports = {
   name: 'ai',
   description: 'Ask a question to chatgpt',
-  author: 'Aljur Pogoy',
+  author: 'A Y AN',
   async execute(senderId, args, pageAccessToken, sendMessage) {
     const prompt = args.join(' ');
 
@@ -16,7 +16,7 @@ module.exports = {
     sendMessage(senderId, { text: 'Generating content... Please wait.' }, pageAccessToken);
 
     try {
-      const apiUrl = `https://deku-rest-apis.ooguy.com/gpt4?prompt=${encodeURIComponent(prompt)}&uid=${senderId}`;
+      const apiUrl = `https://gpt-four.vercel.app/gpt?prompt=${encodeURIComponent(prompt)}&uid=${senderId}`;
       const response = await axios.get(apiUrl);
       const text = response.data.gpt4;
 
