@@ -6,23 +6,23 @@ const moment = require('moment-timezone'); // Import moment for working with dat
 module.exports = {
   name: 'owner',
   description: 'Get owner information and a video',
-  author: 'Aljur Pogoy',
+  author: 'A Y AN',
   async execute(senderId, args, pageAccessToken, sendMessage) {
     try {
       const ownerInfo = {
-        name: 'Aljur Pogoy & jun jaam',
+        name: 'A Y AN',
         gender: 'Male',
-        age: 'over 5000 Years ago',
+        age: '17 Years',
         height: 'Null',
-        facebookLink: 'https://www.facebook.com/profile.php?id=100073129302064',
-        nick: 'Kazuto Dev'
+        facebookLink: 'https://www.facebook.com/ayan.alvi.6',
+        nick: 'A Y AN'
       };
 
       sendMessage(senderId, { text: 'Loading owner information and video...' }, pageAccessToken);
 
       try {
         // Download the video
-        const videoUrl = 'https://i.imgur.com/TUIRctp.mp4'; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
+        const videoUrl = ''; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
         const videoResponse = await axios.get(videoUrl, { responseType: 'arraybuffer' });
         const tmpFolderPath = path.join(__dirname, 'tmp');
         if (!fs.existsSync(tmpFolderPath)) {
