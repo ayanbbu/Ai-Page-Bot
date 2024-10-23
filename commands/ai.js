@@ -18,7 +18,7 @@ module.exports = {
     try {
       const apiUrl = `https://gpt-four.vercel.app/gpt?prompt=${encodeURIComponent(prompt)}`;
       const response = await axios.get(apiUrl);
-      const text = response.data.gpt4;
+      const text = response.data.answer;
 
       // Send the generated text to the user
       sendMessage(senderId, { text: "GPT4 BY CHATGPT:\n\n" + text }, pageAccessToken);
