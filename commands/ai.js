@@ -16,7 +16,7 @@ module.exports = {
     sendMessage(senderId, { text: 'Generating content... Please wait.' }, pageAccessToken);
 
     try {
-      const apiUrl = `https://gpt-four.vercel.app/gpt?prompt=${encodeURIComponent(prompt)}&uid=${senderId}`;
+      const apiUrl = `https://gpt-four.vercel.app/gpt?prompt=${encodeURIComponent(prompt)}`;
       const response = await axios.get(apiUrl);
       const text = response.data.gpt4;
 
