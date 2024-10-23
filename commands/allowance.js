@@ -3,7 +3,7 @@ const axios = require("axios");
 module.exports = {
   name: 'allowance',
   description: 'Receive your daily allowance',
-  author: 'Bard',
+  author: 'Aljur Pogoy',
   async execute(senderId, args, pageAccessToken, sendMessage) {
     try {
       const { senderID } = event;
@@ -27,7 +27,6 @@ module.exports = {
       await usersData.set(senderID, {
         money: userData.money + reward.coin,
         exp: userData.exp + reward.exp,
-        data: userData.data
       });
 
       // Send reward message
