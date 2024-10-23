@@ -9,7 +9,7 @@ module.exports = {
     sendMessage(senderId, { text: 'Retrieving list of admins... Please wait.' }, pageAccessToken);
     try {
       // Replace with your actual admin list
-      const admins = ['Aljur Pogoy','John Smith'];
+      const admins = ['Aljur Pogoy','John Smith','Jun jaam'];
       // Send the list of admins to the user
       sendMessage(senderId, { text: `Bot Admins:\n\n${admins.join('\n')}` }, pageAccessToken);
     } catch (error) {
